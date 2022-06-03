@@ -26,6 +26,7 @@ public class Computer {
         myComputer.reduceBrightness(15);
         myComputer.playMusic();
         myComputer.adjustTheVolume(20);
+        myComputer.turnOnAndOff(70);
 
         ChromeBrowser newWindow = new ChromeBrowser();
         newWindow.openNewTabInChromeBrowser();
@@ -33,7 +34,7 @@ public class Computer {
 
         TextEditor myText = new TextEditor();
         System.out.println(myText.openTextEditor());
-        myText.writeIntoTextEditor("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+        myText.writeIntoTextEditor("sdfnolen");
         myText.closeTextEditor();
 
         MicrosoftOutlook myMail = new MicrosoftOutlook();
@@ -46,5 +47,13 @@ public class Computer {
         System.out.println(myCalculator.addThreeNumbers(5,10,15));
         System.out.println(myCalculator.deductionOfTwoNumbers(5,10));
 
+    }
+    public void turnOnAndOff(int idleTime) {
+        if(idleTime>60) {
+            System.out.println("System Idle, Turning Off");
+        }
+        else {
+            System.out.println("System Running.");
+        }
     }
 }
